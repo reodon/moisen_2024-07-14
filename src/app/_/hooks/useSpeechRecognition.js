@@ -50,6 +50,7 @@ const useSpeechRecognition = () => {
         } else {
           setTranscript(results[i][0].transcript);
         }
+        console.log('recognition:onresult:for');
       }
       console.log('recognition:onresult');
     };
