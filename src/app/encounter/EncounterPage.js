@@ -58,6 +58,53 @@ export default function EncounterPage() {
       <div>患者情報</div>
       氏名：小林慎治、54歳、男性
 
+      <ul
+        className={twMerge("steps steps-vertical !items-start")}
+        style={{gridAutoRows: 'auto'}}
+      >
+        <li className={twMerge(
+          "step",
+          "!items-start",
+
+          "after:!self-start",
+
+          "before:!content-['']",
+          "before:top-0",
+          "before:!translate-y-0",
+        )}>
+          <H2Block heading={'受診理由（主訴・症状）'}>
+            <div className="pb-4 text-left">
+              foo bar baz.<br/>
+              foo bar baz.<br/>
+              foo bar baz.<br/>
+              foo bar baz.<br/>
+              foo bar baz.<br/>
+            </div>
+          </H2Block>
+        </li>
+
+        <li className={twMerge(
+          "step",
+          "!items-start",
+
+          "after:!self-start",
+
+          "before:!content-['']",
+          "before:top-0",
+          "before:!translate-y-0",
+        )}>
+          <H2Block heading={'受診理由（主訴・症状）'}>
+            <div className="text-left">
+              foo bar baz.<br/>
+              foo bar baz.<br/>
+              foo bar baz.<br/>
+              foo bar baz.<br/>
+              foo bar baz.<br/>
+            </div>
+          </H2Block>
+        </li>
+      </ul>
+
       <H2Block heading={'受診理由（主訴・症状）'}>
         {Object.keys(data.symp2diag).map((symp) => <Fragment key={symp}>
           <div>
