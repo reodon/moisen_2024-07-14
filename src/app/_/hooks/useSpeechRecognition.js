@@ -33,7 +33,7 @@ const useSpeechRecognition = () => {
       recognition.stop();
       setText("");
     }
-  }, [isRecording]);
+  }, [isRecording, recognition]);
 
   useEffect(() => {
     if (!recognition) return;
