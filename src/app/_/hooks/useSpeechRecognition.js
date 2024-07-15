@@ -16,8 +16,8 @@ const useSpeechRecognition = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // const recognition = new webkitSpeechRecognition();
-      const recognition = new SpeechRecognition();
+      // const recognition = new SpeechRecognition();
+      const recognition = new webkitSpeechRecognition();
       recognition.lang = "ja-JP";
       recognition.continuous = true;
       recognition.interimResults = true;
