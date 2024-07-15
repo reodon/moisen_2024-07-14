@@ -22,6 +22,7 @@ const useSpeechRecognition = () => {
       recognition.continuous = true;
       recognition.interimResults = true;
       setRecognition(recognition);
+      console.log('useEffect:first');
     }
   }, []);
 
@@ -29,10 +30,13 @@ const useSpeechRecognition = () => {
     if (!recognition) return;
     if (isRecording) {
       recognition.start();
+      console.log('recognition:start');
     } else {
       recognition.stop();
       setText("");
+      console.log('recognition:stop');
     }
+    console.log('useEffect:second');
   }, [isRecording, recognition]);
 
   useEffect(() => {
@@ -47,7 +51,9 @@ const useSpeechRecognition = () => {
           setTranscript(results[i][0].transcript);
         }
       }
+      console.log('recognition:onresult');
     };
+    console.log('useEffect:thrid');
   }, [recognition]);
 
   return {
